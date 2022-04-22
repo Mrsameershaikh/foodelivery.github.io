@@ -1,0 +1,246 @@
+/* CSS RESET */
+*{
+    margin: 0px;
+    padding:0px;
+}
+body{
+    background-color: rgb(238, 235, 230);
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+/* Navigation Bar Logo and Image */
+#logo{
+    margin: 0px 15px;
+    
+}
+#logo img{
+    height: 55px;
+    margin: 2px 1px;
+    border: 1px solid rgb(24, 22, 22);
+    border-radius: 75px;
+}
+
+/* Navigation Bar  List styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding:0px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    
+
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position:absolute;
+    height: 75%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    top: 0px;
+    left: 0px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 2px 200px;
+    height: 280px;
+    align-items: center;
+    justify-content: center;
+}
+#home::before{
+    content: "";
+    background:url('../bg4.jpg') no-repeat center center/cover;
+    position: absolute;
+    height:69%;
+    width: 100%;
+    z-index: -1;
+    opacity: .60;
+    top: 0px;
+    left: 0px;
+}
+
+#home h1{
+    text-shadow:2px 2px white;
+    text-align: center;
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    
+}
+
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+border: 1px solid brown;
+padding: 30px;
+margin: 3px 24px;
+border-radius: 23px;
+background-color: #f3f0ef;
+font-family: 'Bree Serif', serif;
+font-size: 1rem;
+}
+#services .box:hover{
+    box-shadow: 10px 5px gray;
+}
+#services .box img{
+    height: 170px;
+    margin: auto;
+    display: block;
+}
+#services-container h1{
+    margin-top: 59px;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Clients Section */
+#client-sention{
+    height: 344px;
+    position: relative;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.client-item{
+    padding: 35px;
+}
+#clients img{
+    height: 175px;
+    position: relative;
+    animation-name: client;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes client {
+    50%{
+        transform: translateX(123px)}
+
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("../bg3.jpg") no-repeat center/cover;
+    width: 100%;
+    height: 50%;
+    z-index: -1 ;
+    opacity: 0.4;
+}   
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+    display: block;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url("../contactus.png")center no-repeat;
+    width: 100%;
+    height: 92%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+
+
+}
+#contact-box form{
+    width:30%;
+    
+}
+#contact-box label{
+    font-size:1rem;
+    font-family: 'Bree Serif', serif;
+}
+#contact-box input{
+    width: 106%;
+    height: 30px;
+    border-radius: 10px;
+}
+#contact-box textarea{
+    width: 100%;
+    padding:1rem;
+    border-radius: 10px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 2px 2px;
+}
+
+/* Utility class */
+.h-primary{
+    font-size: 2.5rem;
+    padding: 15px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 0px 9px;
+    border: 2px soild rgb(248, 242, 242);
+    background-color: #b7644b;
+    margin: 3px;
+    font-size: 1.5rem;
+    border-radius: 35px;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 3px 8px 5px white;
+}
+
+.center{
+    text-align: center;
+}
